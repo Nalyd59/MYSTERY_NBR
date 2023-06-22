@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mystery Number</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header>
+        <h1>Mystery Number</h1>
+    </header>
+    <div class="container">
+        <div class="input">
+            <label for="nbr_ext">Entrer un chiffre</label>
+            <input id="nbr_ext" name="nbr_ext" type="number" value='0' min="0" max="10">
+            <input type="button" value="tester" onclick="verif(document.getElementById('nbr_ext').value)">
+        </div>
+        <div class="ecran">
+            <h2>Trouvez le numéro mystère (entre 1 et 10)</h2>
+            <br>
+            <div >
+                <h3>1er essai</h3>
+                <p id="result_1"></p>
+            </div>
+            <div>
+                <h3>2eme essai</h3>
+                <p id="result_2"></p>
+            </div>
+            <div>
+                <h3>3eme essai</h3>
+                <p id="result_3"></p>
+            </div>
+            <br>
+            <div>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+		<span>2023 © CREPIN Dylan</span>
+	</footer>
+</body>
+</html>
