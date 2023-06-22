@@ -16,11 +16,16 @@
             <input id="nbr_ext" name="nbr_ext" type="number" value='0' min="0" max="10">
             <input id="btn" type="button" value="tester" onclick="verif(document.getElementById('nbr_ext').value)">
             <br><br>
-            <select name="select" id="select">
-                <option value="1" selected>level 1</option>
-                <option value="2">level 2</option>
-                <option value="3">level 3</option>
-            </select>
+            <div>
+                <input type="radio" id="lvl1" name="select" value="1" checked>
+                <label for="lvl1">LEVEL 1</label>
+                <br>
+                <input type="radio" id="lvl2" name="select" value="2">
+                <label for="lvl2">LEVEL 2</label>
+                <br>
+                <input type="radio" id="lvl3" name="select" value="3">
+                <label for="lvl3">LEVEL 3</label>
+            </div>
         </div>
         <div id="ecran">
             <h2>Trouvez le numéro mystère (entre 1 et 10)</h2>
