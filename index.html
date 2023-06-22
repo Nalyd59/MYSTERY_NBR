@@ -8,16 +8,21 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 <body>
-    <header>
+    <header id="header">
         <h1>Mystery Number</h1>
     </header>
-    <div class="container">
-        <div class="input">
-            <label for="nbr_ext">Entrer un chiffre</label>
+    <div id="container">
+        <div id="input">
             <input id="nbr_ext" name="nbr_ext" type="number" value='0' min="0" max="10">
-            <input type="button" value="tester" onclick="verif(document.getElementById('nbr_ext').value)">
+            <input id="btn" type="button" value="tester" onclick="verif(document.getElementById('nbr_ext').value)">
+            <br><br>
+            <select name="select" id="select">
+                <option value="1" selected>level 1</option>
+                <option value="2">level 2</option>
+                <option value="3">level 3</option>
+            </select>
         </div>
-        <div class="ecran">
+        <div id="ecran">
             <h2>Trouvez le numéro mystère (entre 1 et 10)</h2>
             <br>
             <div >
@@ -39,7 +44,7 @@
         </div>
     </div>
     <script src="script.js"></script>
-    <footer>
+    <footer id="footer">
 		<span>2023 © CREPIN Dylan</span>
 	</footer>
 </body>

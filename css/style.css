@@ -18,7 +18,7 @@ header {
 	align-items: center;
 	margin: auto;
 }
-.container{
+#container{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -26,11 +26,14 @@ header {
 	background-color: #5372f0;
     border: 1px solid black;
 }
-.ecran, .input{
+#ecran, #input{
     background-color: #FFF7D4;
     padding: 10px;
     margin: 10px;
     border: 1px solid black;
+}
+li{
+	list-style-type: none;
 }
 footer {
 	height: 80px;
