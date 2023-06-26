@@ -1,58 +1,49 @@
-i = 0;
-niv = document.getElementById('select');
-essai = 3;
-number_win = Math.floor(Math.random() * 10);
-
-
-function verif(number_test){
-
-    if (number_test == number_win) {
-        document.getElementById('ecran').textContent = ' gagné !! Le nombre est bien ' + number_win;
-        document.getElementById('container').style.background = '#14c214';
-        document.getElementById('header').style.background = 'grey';
-        document.getElementById('ecran').style.background = 'grey';
-        document.getElementById('footer').style.background = 'grey';
-        document.getElementById('nbr_ext').style.display = "none";
-        document.getElementById('input').style.display = "none";
+let nbr_win ='';
+let essai ='';
+function set_level() {
+    if (document.getElementById("hard").checked) {
+        essai = 1;
+        niv = 3;
+        nbr_win = Math.floor(Math.random()*100);
+        console.log(nbr_win);
+    }else if(document.getElementById("normal").checked){
+        essai = 2;
+        niv = 2;
+        nbr_win = Math.floor(Math.random()*50);
+        console.log(nbr_win);
     }else{
-        document.getElementById('result').textContent = ' perdu !!';
-        i++;
+        essai = 3;
+        niv = 1;
+        nbr_win = Math.floor(Math.random()*10);
+        console.log(nbr_win);
+    }
+}
+
+function testnbr() {
+
+    var nbr = document.getElementById("nbr").value;
+
+    if(nbr > nbr_win){
+        document.getElementById('ecran1').innerHTML += nbr + " plus petit <hr>";
+        essai--;
+    }else if(nbr < nbr_win){
+        document.getElementById('ecran1').innerHTML += nbr + " plus grand <hr>";
+        essai--;
+    }else{
+        document.getElementById('resultat').style.visibility = 'visible';
+        document.getElementById('resultat_titre').innerHTML = 'gagné !!';
+        document.getElementById('resultat_nbr').textContent = 'Le resultat est bien : ' + nbr_win;
     }
 
 
-    switch (i) {
+    if (essai === 0) {
 
-        case 1:
-            if (number_test > number_win) {
-                document.getElementById('result_1').textContent = number_test + " plus petit";
-            }else{
-                document.getElementById('result_1').textContent = number_test + " plus grand";
-            }
-            break;
-        case 2:
-            if (number_test > number_win) {
-                document.getElementById('result_2').textContent = number_test + " plus petit";
-            }else{
-                document.getElementById('result_2').textContent = number_test + " plus grand";
-            };
-            break;
-        case 3:
-            if (number_test > number_win) {
-                document.getElementById('result_3').textContent = number_test + " plus petit";
-            }else{
-                document.getElementById('result_3').textContent = number_test + " plus grand";
-            }
-            break;
-        default:
-            break;
-    }
-    if (i > essai) {
-        document.getElementById('ecran').style.display = "none";
-        document.getElementById('input').style.display = "none";
-        window.location.reload();
-    }
-    if(i > (essai-1)){
-        document.getElementById('btn').value = "RECOMMENCER";
-        document.getElementById('nbr_ext').style.display = "none";
+        document.getElementById('resultat').style.visibility = 'visible';
+        document.getElementById('resultat_titre').innerHTML = 'perdu !! vous avez plus de chances';
+        document.getElementById('resultat_nbr').textContent = 'Le resultat etais : ' + nbr_win;
+
+    }else if (essai < 0){
+
+        location.reload();
     }
 }

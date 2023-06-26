@@ -45,3 +45,6 @@ footer {
 	align-items: center;
 	background-color: #FFF7D4;
 }
+#resultat{
+	visibility: hidden;
+}

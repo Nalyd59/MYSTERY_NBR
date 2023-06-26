@@ -12,42 +12,61 @@
         <h1>Mystery Number</h1>
     </header>
     <div id="container">
+
         <div id="input">
-            <input id="nbr_ext" name="nbr_ext" type="number" value='0' min="0" max="10">
-            <input id="btn" type="button" value="tester" onclick="verif(document.getElementById('nbr_ext').value)">
-            <br><br>
             <div>
-                <input type="radio" id="lvl1" name="select" value="1" checked>
-                <label for="lvl1">LEVEL 1</label>
-                <br>
-                <input type="radio" id="lvl2" name="select" value="2">
-                <label for="lvl2">LEVEL 2</label>
-                <br>
-                <input type="radio" id="lvl3" name="select" value="3">
-                <label for="lvl3">LEVEL 3</label>
+                <form>
+                    <input type="checkbox" name="select" id="easy" checked>
+                    <label for="easy">easy</label>
+
+                    <input type="checkbox" name="select" id="normal">
+                    <label for="normal">normal</label>
+
+                    <input type="checkbox" name="select" id="hard">
+                    <label for="hard">hard</label>
+
+                    <input id="btn" type="button" value="difficulté" onclick="set_level()">
+                </form>
+            </div>
+            <br>
+            <div>
+                <input id="nbr" name="nbr" type="number" value="0">
+                <br><br>
+                <input id ="btn" type="button" value="TESTER" onclick="testnbr()">
             </div>
         </div>
+
         <div id="ecran">
-            <h2>Trouvez le numéro mystère (entre 1 et 10)</h2>
-            <br>
-            <div >
-                <h3>1er essai</h3>
-                <p id="result_1"></p>
+
+            <h2>Trouvez le numéro mystère</h2>
+
+            <div id="ecran1">
+                <h3></h3>
+                <p></p>
             </div>
-            <div>
-                <h3>2eme essai</h3>
-                <p id="result_2"></p>
+
+            <div id="ecran2">
+                <h3></h3>
+                <p></p>
             </div>
-            <div>
-                <h3>3eme essai</h3>
-                <p id="result_3"></p>
+
+            <div id="ecran3">
+                <h3></h3>
+                <p></p>
             </div>
-            <br>
-            <div>
-                <p id="result"></p>
+
+            <div id="resultat">
+                <h2 id="resultat_titre"></h2>
+                <p id="resultat_nbr"></p>
+                <button id="btn" type="button" onclick="location.reload()">REJOUER</button>
             </div>
+
+            
+
         </div>
+
     </div>
+
     <script src="script.js"></script>
     <footer id="footer">
 		<span>2023 © CREPIN Dylan</span>
