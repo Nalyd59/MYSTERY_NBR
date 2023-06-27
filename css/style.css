@@ -23,14 +23,15 @@ header {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	background-color: #5372f0;
+	background-color: #fff;
     border: 1px solid black;
 }
-#ecran, #input{
-    background-color: #FFF7D4;
-    padding: 10px;
-    margin: 10px;
+#ecran{
     border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	margin: 50px;
 }
 li{
 	list-style-type: none;
@@ -47,4 +48,18 @@ footer {
 }
 #resultat{
 	visibility: hidden;
+}
+#btn{
+	border: 1px solid black;
+}
+#ecran > p{
+	font-weight: bold;
+}
+#container > div{
+	margin: 10px;
+}
+form{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }

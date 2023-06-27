@@ -31,7 +31,7 @@ function testnbr() {
         essai--;
     }else{
         document.getElementById('resultat').style.visibility = 'visible';
-        document.getElementById('resultat_titre').innerHTML = 'gagné !!';
+        document.getElementById('resultat_titre').innerHTML = 'gagné !!  :)';
         document.getElementById('resultat_nbr').textContent = 'Le resultat est bien : ' + nbr_win;
     }
 
@@ -39,7 +39,7 @@ function testnbr() {
     if (essai === 0) {
 
         document.getElementById('resultat').style.visibility = 'visible';
-        document.getElementById('resultat_titre').innerHTML = 'perdu !! vous avez plus de chances';
+        document.getElementById('resultat_titre').innerHTML = 'perdu !! :(';
         document.getElementById('resultat_nbr').textContent = 'Le resultat etais : ' + nbr_win;
 
     }else if (essai < 0){
